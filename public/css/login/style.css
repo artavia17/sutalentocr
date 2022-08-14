@@ -104,6 +104,16 @@ div#alert{
     width: 230px;
 }
 
+img{
+    width: 100%;
+}
+
+#logo{
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+}
+
 /* Color */
 
 main,
@@ -114,7 +124,8 @@ button{
 }
 main::after,
 section form,
-input{
+input,
+#logo{
     background-color: white;
     color: black;
 }
@@ -239,4 +250,54 @@ section{
 
 section{
     box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+}
+
+
+/* Responsive 1800 */
+
+@media (max-width: 1800px){
+
+    section {
+        width: 62vw;
+        height: 38vw;
+    }
+
+}
+
+/* Responsive 1200 */
+
+@media (max-width: 1800px){
+
+    section {
+        width: 83vw;
+        height: 51vw;
+    }
+
+}
+
+/* Responsive 906 */
+
+@media (max-width: 906px){
+
+    section {
+        width: 100vw;
+        height: 100vh;
+    }
+
+}
+
+
+/* Responsive 700 */
+
+@media (max-width: 906px){
+
+    #container_logo{
+        display: none;
+    }
+
+    form{
+        width: 91vw;
+        height: 100vh;
+    }
+
 }

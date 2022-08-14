@@ -14,8 +14,10 @@
         
         <main>
             <section>
-                <div>
-                    <h1>Su Talento CR</h1>
+                <div id="container_logo">
+                    <div id="logo">
+                        <img src="{{asset('img/164686254_116362043819285_7656085136560770984_n-removebg-preview.png')}}" alt="">
+                    </div>
                 </div>
                 
                 <form method="POST">
