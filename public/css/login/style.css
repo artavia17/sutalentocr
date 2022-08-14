@@ -1,4 +1,8 @@
+/* Fonts */
+
 @import url('https://fonts.googleapis.com/css2?family=Koulen&family=Roboto&display=swap');
+
+/* Global */
 
 *{
     padding: 0px;
@@ -16,7 +20,8 @@ label,
 input,
 button,
 span,
-div#alert{
+div#alert,
+strong{
     font-family: 'Koulen', cursive;
     font-family: 'Roboto', sans-serif;
     font-weight: light;
@@ -30,6 +35,12 @@ label,
 input,
 button{
     font-size: 1rem;
+}
+
+strong,
+label,
+input{
+    font-weight: lighter;
 }
 
 /* Size */
@@ -61,8 +72,7 @@ button{
     padding: 14px 10px;
 }
 
-input[type="email"],
-input[type="password"]{
+input{
     padding: 14px 10px;
     width: 95%;
 }
@@ -114,6 +124,16 @@ img{
     border-radius: 50%;
 }
 
+div#help{
+    width: 50%;
+    border-radius: 5px;
+    height: 63px;
+}
+
+div#help strong{
+    margin-left: 14px;
+}
+
 /* Color */
 
 main,
@@ -125,7 +145,8 @@ button{
 main::after,
 section form,
 input,
-#logo{
+#logo,
+div#help{
     background-color: white;
     color: black;
 }
@@ -164,11 +185,22 @@ div#alert{
     background-color: rgba(0, 175, 0, 0.746);
 }
 
+div#help{
+    border: 1px solid #c2c1c1;
+    opacity: 0;
+    transition: .3s ease-in-out;
+}
+
+div#help.active{
+    opacity: 1;
+}
+
 /* Flex */
 
 main,
 section div,
-section form{
+section form,
+div#help{
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -201,6 +233,23 @@ main::after{
     position: fixed;
     top: 0px;
     right: 0px;
+}
+
+form{
+    position: relative;
+}
+
+strong{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+#help{
+    position: absolute;
+    top: 40px;
+    right: 10px;
 }
 
 div#alert{
@@ -249,9 +298,29 @@ section{
 /* Sombras */
 
 section{
-    box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
 }
 
+/* Formas */
+
+div#help::before {
+    content: "";
+    position: absolute;
+    top: -19px;
+    width: 0px;
+    height: 0px;
+    border-right: 9px solid transparent;
+    border-top: 9px solid transparent;
+    border-left: 9px solid transparent;
+    border-bottom: 9px solid #c2c1c1;
+    right: 39px;
+}
+
+/* Ocultar */
+
+form img{
+    display: none;
+}
 
 /* Responsive 1800 */
 
@@ -289,7 +358,7 @@ section{
 
 /* Responsive 700 */
 
-@media (max-width: 906px){
+@media (max-width: 700px){
 
     #container_logo{
         display: none;
@@ -298,6 +367,27 @@ section{
     form{
         width: 91vw;
         height: 100vh;
+    }
+
+    div#help {
+        width: 60%;
+        border-radius: 5px;
+        height: 63px;
+    }
+
+    div#help strong {
+        position: relative;
+        top: 0px;
+        left: 0px;
+        margin: 0px;
+        text-align: center;
+    }
+
+    form img{
+        display: block;
+        width: 39%;
+        position: absolute;
+        top: 17px;
     }
 
 }

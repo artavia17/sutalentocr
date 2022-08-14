@@ -5,10 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" href="{{asset('css/login/style.css')}}">
-
+        <link rel="shortcut icon" href="{{asset('img/164686254_116362043819285_7656085136560770984_n-removebg-preview.png')}}" type="image/x-icon">
         <title>Su Talento</title>
         <!-- Fonts -->
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
     </head>
     <body class="antialiased">
         
@@ -20,9 +21,16 @@
                     </div>
                 </div>
                 
-                <form method="POST">
+                <form method="POST" id="formulario">
+                    
+                    <img src="{{asset('img/164686254_116362043819285_7656085136560770984_n-removebg-preview.png')}}" alt="">
 
                     <h1>INICIAR SESIÓN</h1>
+
+                    <strong id="help-button">Necesitas ayuda?</strong>
+                    <div id="help">
+                        <strong>Ponerse en contacto con alonso@gmail.com</strong>
+                    </div>
 
                     @csrf
                     <div>
@@ -56,6 +64,8 @@
                 @endif
             </section>
         </main>
+
+        <script src="{{asset('js/login/app.js')}}"></script>
 
     </body>
 </html>
