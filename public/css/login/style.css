@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Roboto&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+/* Tipography */
+
+section form label{
+    text-align: left;
+}
+
+h1,
+label,
+input,
+button,
+span,
+div#alert{
+    font-family: 'Koulen', cursive;
+    font-family: 'Roboto', sans-serif;
+    font-weight: light;
+}
+
+h1{
+    font-size: 2.1rem;
+}
+
+label,
+input,
+button{
+    font-size: 1rem;
+}
+
+/* Size */
+
+main{
+    width: 100vw;
+    height: 100vh;
+}
+
+main::after{
+    content: "";
+    width: 50vw;
+    height: 100vh;
+}
+
+section{
+    width: 40vw;
+    height: 26vw;
+}
+
+div,
+label,
+button,
+span{
+    width: 100%;
+}
+
+button{
+    padding: 14px 10px;
+}
+
+input[type="email"],
+input[type="password"]{
+    padding: 14px 10px;
+    width: 95%;
+}
+
+label:nth-child(2){
+    width: auto;
+}
+
+form{
+    padding: 30px;
+}
+
+h1{
+    margin-bottom: 30px;
+}
+
+section form div,
+span{
+    margin-bottom: 18px;
+}
+
+section form div label{
+    margin-bottom: 10px;
+}
+
+#recordar{
+    margin-bottom: 0px;
+    margin-left: 6px;
+}
+
+input[type="checkbox"]{
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+}
+
+div#alert{
+    padding: 20px;
+    width: 230px;
+}
+
+/* Color */
+
+main,
+section,
+button{
+    background-color: #229ad7;
+    color: white;
+}
+main::after,
+section form,
+input{
+    background-color: white;
+    color: black;
+}
+
+input{
+    border-radius: 0px;
+    border: 1px solid #c2c1c1;
+    outline: solid;
+    outline-color: transparent;
+    transition: .2s ease-in-out;
+}
+
+input:focus{
+    outline: solid;
+    outline-color: #229ad7;
+    border: 1px solid transparent;
+}
+
+button{
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+button:hover{
+    border: 2px solid #229ad7;
+    background-color: white;
+    color: #229ad7;
+}
+
+span{
+    color: red;
+}
+
+div#alert{
+    background-color: rgba(0, 175, 0, 0.746);
+}
+
+/* Flex */
+
+main,
+section div,
+section form{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main,
+section div,
+section form,
+section form div:nth-child(3),
+section form div:nth-child(4){
+    flex-flow: column;
+}
+
+section form div{
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+
+/* Grid */
+
+section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Position */
+
+main::after{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+}
+
+div#alert{
+    position: fixed;
+    bottom: 100px;
+    right: 16px;
+    animation: exito 7s ease-in-out;
+    opacity: 0;
+}
+
+@keyframes exito{
+
+    0%{
+        bottom: -80px;
+        opacity: 0;
+    }
+
+    30%{
+        bottom: 16px;
+        opacity: 1;
+    }
+
+    60%{
+        bottom: 16px;
+        opacity: 1;
+    }
+
+    90%{
+        bottom: 16px;
+        opacity: 1;
+    }
+
+    100%{
+        bottom: 70px;
+        opacity: 0;
+    }
+
+}
+
+/* Index */
+
+section{
+    z-index: 1;
+}
+
+/* Sombras */
+
+section{
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+}

@@ -4,52 +4,55 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Su Talento</title>
+        <link rel="stylesheet" href="{{asset('css/login/style.css')}}">
 
+        <title>Su Talento</title>
         <!-- Fonts -->
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     </head>
     <body class="antialiased">
         
         <main>
-             
-            <div>
-                <h1>Su Talento CR</h1>
-            </div>
+            <section>
+                <div>
+                    <h1>Su Talento CR</h1>
+                </div>
+                
+                <form method="POST">
 
-            <form method="POST">
-                @csrf
-                <label for="email">
-                    Ingresar correo electrónico
-                    <input type="email" autofocus value="{{old('email')}}" name="email" id="email">    
-                </label>
+                    <h1>INICIAR SESIÓN</h1>
 
-                @error('email')
-                    {{$message}} 
-                @enderror
+                    @csrf
+                    <div>
+                        <label for="email">Ingresar correo electrónico</label>
+                        <input type="email" autofocus value="{{old('email')}}" name="email" id="email">    
+                    </div>
+                    @error('email')
+                        <span>{{$message}} </span>
+                    @enderror
 
-                <label for="password">
-                    Ingresar contraseña
-                    <input type="password" name="password" id="password">
-                </label>
+                    <div>
+                        <label for="password">Ingresar contraseña</label>
+                        <input type="password" name="password" id="password">
+                    </div>
 
-                @error('password')
-                    {{$message}} 
-                @enderror
+                    @error('password')
+                        <span>{{$message}} </span>
+                    @enderror
+                    <div>
+                        <input type="checkbox" id="check" name="remember">
+                        <label for="check" id="recordar">Recordar mi sesión</label>
+                    </div>
 
-                <label>
-                    Recordar mi sesión
-                    <input type="checkbox" name="remember">
-                </label>
-                <button type="submit">Iniciar Sesión</button>
-            </form>
+                    <button type="submit">Iniciar Sesión</button>
+                </form>
 
-            @if(session('logout'))
-
-                {{session('logout')}}
-
-            @endif
-
+                @if(session('logout'))
+                    <div id="alert" class="bg-success">
+                        {{session('logout')}}
+                    </div>
+                @endif
+            </section>
         </main>
 
     </body>
