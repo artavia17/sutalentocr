@@ -19,9 +19,11 @@ class LoginController extends Controller
         if(!User::first()){
             User::create([
 
-                'name' => 'Su Talento',
+                'name' => 'Alonso Fabian',
                 'email' => 'admin@sutalentocr.com',
                 'password' => Hash::make('SuTalentowebcr@13082022'),
+                'photo' => 'null',
+                'type' => 'Administrador'
 
             ]);
         }
@@ -51,7 +53,7 @@ class LoginController extends Controller
         if(Auth::attempt($crendetials, $remember)){
 
             request()->session()->regenerate();
-            return redirect()->intended('dashboard')->with('status', 'Has iniciado sesión correctamente');
+            return redirect()->intended('dashboard')->with('status', 'Bienvenido');
 
         }
 

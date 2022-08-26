@@ -1,0 +1,82 @@
+#foto{
+    display: none;
+}
+
+#imagen_perfil{
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+}
+
+
+#container_image_perfil{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+#container_image_perfil::before{
+    content: "Subir fotografia";
+    position: absolute;
+    width: 200px;
+    height: 201px;
+    background-color: black;
+    border-radius: 50%;
+    z-index: 1;
+    cursor: pointer;
+    display: none;
+}
+
+#container_image_perfil:hover::before{
+    content: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADsAAAAsCAMAAADsKDCiAAAAM1BMVEVMaXH////////////////////////////////////////////////////////////////x7/yuAAAAEHRSTlMAQJCgINAQwDDwYICw4HBQAmUofQAAAAlwSFlzAAALEgAACxIB0t1+/AAAAaFJREFUSInFlsva7RAMQIOg1Zv3f9rziVKEXf0nJ4M9sLPkHoWuoFr9I6sSfbWeON+K/DvqvfqEanvLB5jQVWE+QLlOwpLQpTpbImx+k5fuoAk+XIfGrQqNoQnOSZBJw8g6pR0UYNG10k4umOZ0EFZrQZuUnHwisbJW3oOysmIBlpgFbO2gtPdtLASMGRVkVjM3UZUWeALCvTv9Xu1frhwF7/3JUhecJTaYFdtze2pobVOErKnCIbEB9d5jhdrYCVcMux2kkt0ezyh76+PmRQFcY7awa9v+oKY6xiyI7UYFt0KeuDGbZaf010KFnGCDg21BMajiK7vw2O4ciFdWdFyOZdim2O0/sZaxIdHnKxtSujL2mMoVqbkGpX6Bdza4dzQDHZTUBIt85ra4Jt7ZuMBK+PS85gM2Ls68aHCnmTRTbFrk9hRCnHt/Z4/Y/Apk4et+yILZK9SyDfyDBRD22fdttd9YAHTSWqtObrNiP3yKpIupc1V3Xt9E0sRcP96+kRhqNBd7tfgymZD4WISeZ8Wck1jy9kmfktwt7iutTwMA/wAhWjjPd0B6egAAAABJRU5ErkJggg==");
+    display: block;
+    position: absolute;
+    width: 200px;
+    height: 201px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+div#alert{
+    position: fixed;
+    bottom: 100px;
+    right: 16px;
+    animation: exito 7s ease;
+    width: auto;
+    opacity: 0;
+}
+
+@keyframes exito{
+
+    0%{
+        bottom: -80px;
+        opacity: 0;
+    }
+
+    25%{
+        bottom: 16px;
+        opacity: 1;
+    }
+
+    50%{
+        bottom: 16px;
+        opacity: 1;
+    }
+
+    75%{
+        bottom: 16px;
+        opacity: 1;
+    }
+
+    100%{
+        bottom: 70px;
+        opacity: 0;
+    }
+
+}
