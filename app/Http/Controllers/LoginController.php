@@ -53,7 +53,7 @@ class LoginController extends Controller
         if(Auth::attempt($crendetials, $remember)){
 
             request()->session()->regenerate();
-            return redirect()->intended('dashboard')->with('status', 'Bienvenido');
+            return redirect()->intended('dashboard')->with('status', 'Ha iniciado sesión correctamente');
 
         }
 

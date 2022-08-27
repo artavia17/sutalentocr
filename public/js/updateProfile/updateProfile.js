@@ -38,7 +38,7 @@ actualizar.onsubmit = (e) =>{
       e.preventDefault();
   }else{
     error.textContent = "";
-    boton_updated.textContent = "Actualizando perfil..."
+    boton_updated.textContent = "Actualizando perfil ..."
     boton_updated.disabled = true;
 
   }

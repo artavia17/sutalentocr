@@ -60,9 +60,9 @@
 
 	@if(session('status'))
 
-		<span id="bienvenida">
-			{{session('status')}} {{auth()->user()->name}}
-		</span>
+		<div id="alert" class="bg-success text-white p-3 rounded">
+			{{session('status')}}
+		</div>
 
 	@endif
 

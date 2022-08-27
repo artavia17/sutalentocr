@@ -44,11 +44,11 @@ input{
 }
 
 /* Size */
-
+/* 
 main{
     width: 100vw;
     height: 100vh;
-}
+} */
 
 main::after{
     content: "";
@@ -189,7 +189,7 @@ span{
 }
 
 div#alert{
-    background-color: rgba(0, 175, 0, 0.746);
+    background-color: #198754;
 }
 
 div#help{
@@ -345,8 +345,8 @@ form img{
 @media (max-width: 1800px){
 
     section {
-        width: 83vw;
-        height: 51vw;
+        width: 66vw;
+        height: 81vh;
     }
 
 }
@@ -367,13 +367,16 @@ form img{
 
 @media (max-width: 700px){
 
+
     #container_logo{
         display: none;
     }
 
     form{
-        width: 91vw;
+        width: 100vw;
         height: 100vh;
+        padding: 0px;
+        border-radius: 0px;
     }
 
     div#help {
@@ -392,9 +395,17 @@ form img{
 
     form img{
         display: block;
-        width: 39%;
-        position: absolute;
-        top: 17px;
+        width: 131px;
+        transform: translateY(-26px);
+    }
+
+    section{
+        border-radius: 0px;
+    }
+
+    form div,
+    button{
+        width: 89%;
     }
 
 }
