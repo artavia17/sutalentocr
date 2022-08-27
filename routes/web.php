@@ -3,15 +3,16 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UpdateProfileController;
+use App\Http\Controllers\HomeController;
+
 
 
 // Login
 
-Route::get('/', function () {
-    return view('login');
-})->name('login')->middleware('guest');
+Route::get('/', [LoginController::class, 'index'])->name('login')->middleware('guest');
 
 Route::post('/', [LoginController::class, 'login']);
+
 
 // Cerrar la sesion 
 
@@ -22,11 +23,7 @@ Route::post('/logout', [LoginController::class, 'logout'])->middleware('auth');
 
 // Inicio
 
-Route::get('/dashboard', function(){
-
-    return view('admin/pages/dashboard');
-
-})->middleware('auth')->name('inicio');
+Route::get('/dashboard', [HomeController::class, 'index'])->middleware('auth')->name('inicio');
 
 // Configuracion de usuario
 

@@ -6,7 +6,7 @@
 
         <link rel="stylesheet" href="{{asset('css/login/style.css')}}">
         <link rel="shortcut icon" href="{{asset('img/icon.png')}}" type="image/x-icon">
-        <title>Su Talento</title>
+        <title>Login - Su Talento</title>
         <!-- Fonts -->
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 

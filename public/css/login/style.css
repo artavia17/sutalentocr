@@ -21,7 +21,9 @@ input,
 button,
 span,
 div#alert,
-strong{
+strong,
+#recuperation,
+#inicio_sesion{
     font-family: 'Koulen', cursive;
     font-family: 'Roboto', sans-serif;
     font-weight: light;
@@ -33,7 +35,8 @@ h1{
 
 label,
 input,
-button{
+button,
+#inicio_sesion{
     font-size: 1rem;
 }
 
@@ -43,12 +46,17 @@ input{
     font-weight: lighter;
 }
 
+#recuperation,
+#inicio_sesion{
+    text-decoration: none;
+}
+
 /* Size */
-/* 
+
 main{
     width: 100vw;
     height: 100vh;
-} */
+}
 
 main::after{
     content: "";
@@ -89,6 +97,11 @@ form{
 
 h1{
     margin-bottom: 30px;
+}
+
+#recuperation,
+#inicio_sesion{
+    margin-top: 15px;
 }
 
 section form div,
@@ -396,7 +409,6 @@ form img{
     form img{
         display: block;
         width: 131px;
-        transform: translateY(-26px);
     }
 
     section{

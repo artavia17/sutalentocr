@@ -38,11 +38,11 @@
 						Bienvenido {{auth()->user()->name}}
 					</button>
 					<ul class="dropdown-menu">
-					  <li><a class="dropdown-item text-black fs-5 fw-lighter" href="{{route('configuration')}}">Actualizar perfil</a></li>
+					  <li><a class="dropdown-item text-black  fw-lighter" href="{{route('configuration')}}">Actualizar perfil</a></li>
 					  <li>
 						<form action="/logout" method="POST">
 							@csrf
-							<button type="submit" class="dropdown-item text-black fs-5 fw-lighter">Cerrar Sesion</button>
+							<button type="submit" class="dropdown-item text-black fw-lighter">Cerrar Sesion</button>
 						</form>
 					  </li>
 					</ul>
@@ -65,6 +65,10 @@
 		</div>
 
 	@endif
+
+	<footer class="bg-secondary mt-5 p-3 text-center text-white">
+		@Derechos reservados 2022
+	</footer>
 
 	<script src="@yield('script_url')"></script>
 	<script src="{{asset('bootstrap/js/bootstrap.min.js')}}"></script>

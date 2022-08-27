@@ -10,75 +10,79 @@
 
         <h3 class="text-center">Datos de registro</h3>
 
-        <table class="table">
-            <thead>
-              <tr>
-                <th scope="col">Nombre completo</th>
-                <th scope="col">Correo electrónico</th>
-                <th scope="col">Tipo de usuario</th>
-                <th scope="col">Fecha del registro</th>
-                <th scope="col">Ultima actualizacion</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">{{auth()->user()->name}}</th>
-                <td>{{auth()->user()->email}}</td>
-                <td>{{auth()->user()->type}}</td>
-                <td>{{auth()->user()->created_at}}</td>
-                <td>{{auth()->user()->updated_at}}</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="table_container w-100 overflow-auto" style="">
 
-
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Nombre completo</th>
+                    <th scope="col">Correo electrónico</th>
+                    <th scope="col">Tipo de usuario</th>
+                    <th scope="col">Fecha del registro</th>
+                    <th scope="col">Ultima actualizacion</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">{{auth()->user()->name}}</th>
+                    <td>{{auth()->user()->email}}</td>
+                    <td>{{auth()->user()->type}}</td>
+                    <td>{{auth()->user()->created_at}}</td>
+                    <td>{{auth()->user()->updated_at}}</td>
+                </tr>
+                </tbody>
+            </table>
+        
+        </div>
 
     </div>
     
     <div class="row justify-content-center">
-        <form class="mt-5 px-5 row w-75 justify-content-center" method="POST" id="update">
-            @csrf
-            @method('PUT')
+        <form class="mt-5 justify-content-center col-xxl-7 col-xl-9 col-lg-12 container" method="POST" id="update">
+            <div class="row justify-content-center">
+                @csrf
+                @method('PUT')
 
-            <div class="mb-5 w-100">
-                <label class="d-flex" for="foto" id="container_image_perfil">
+                <div class="mb-5 w-100">
+                    <label class="d-flex" for="foto" id="container_image_perfil">
 
-                    @if ( auth()->user()->photo == 'null')
+                        @if ( auth()->user()->photo == 'null')
 
-                        <img src="{{asset('img/user_logo.png')}}" alt="" width="200" class="m-auto" id="imagen_perfil">
+                            <img src="{{asset('img/user_logo.png')}}" alt="" width="200" class="m-auto" id="imagen_perfil">
 
-                    @else
+                        @else
 
-                        <img src="{{auth()->user()->photo}}" alt="" width="200" class="m-auto" id="imagen_perfil">
+                            <img src="{{auth()->user()->photo}}" alt="" width="200" height="200" class="m-auto" id="imagen_perfil">
 
-                    @endif
+                        @endif
 
-                </label>
-                <input type="file" class="form-control" id="foto" aria-describedby="emailHelp" accept="image/*" onchange="readFile(this)">
-                <input type="hidden" class="form-control" name="perfil" aria-describedby="emailHelp" id="code64" value="null">
-            </div>
+                    </label>
+                    <input type="file" class="form-control" id="foto" aria-describedby="emailHelp" accept="image/*" onchange="readFile(this)">
+                    <input type="hidden" class="form-control" name="perfil" aria-describedby="emailHelp" id="code64" value="null">
+                </div>
 
-            <div class="mb-3 w-50">
-                <label for="nombre" class="form-label">Nombre de usuario</label>
-                <input type="text" class="form-control p-2" id="nombre" aria-describedby="emailHelp" name="user" value="{{auth()->user()->name}}" required>
-            </div>
+                <div class="mb-3 col-xl-6">
+                    <label for="nombre" class="form-label">Nombre de usuario</label>
+                    <input type="text" class="form-control p-2" id="nombre" aria-describedby="emailHelp" name="user" value="{{auth()->user()->name}}" required>
+                </div>
 
-            <div class="mb-3 w-50">
-            <label for="correo" class="form-label">Correo electrónico</label>
-            <input type="email" class="form-control p-2" id="correo" aria-describedby="emailHelp" name="email" value="{{auth()->user()->email}}" required>
-            </div>
+                <div class="mb-3 col-xl-6">
+                <label for="correo" class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control p-2" id="correo" aria-describedby="emailHelp" name="email" value="{{auth()->user()->email}}" required>
+                </div>
 
-            <div class="mb-3 w-50">
-            <label for="password" class="form-label">Cambiar contraseña</label>
-            <input type="password" class="form-control p-2" id="password" name="password" placeholder="Ingrese su nueva contraseña" value="">
-            </div>
+                <div class="mb-3 col-xl-6">
+                <label for="password" class="form-label">Cambiar contraseña</label>
+                <input type="password" class="form-control p-2" id="password" name="password" placeholder="Ingrese su nueva contraseña" value="">
+                </div>
 
-            <div class="mb-3 w-50">
-                <label for="confirmation" class="form-label">Confirmar contraseña</label>
-                <input type="password" class="form-control p-2" id="confirmation" placeholder="Debe confirmar la contraseña">
-                <span class="text-danger" id="error"></span>
-            </div>
-            <button type="submit" class="btn btn-primary w-25 justify-items-center mt-3 rounded"  id="boton_actualizar">Actualizar perfil</button>
+                <div class="mb-3 col-xl-6">
+                    <label for="confirmation" class="form-label">Confirmar contraseña</label>
+                    <input type="password" class="form-control p-2" id="confirmation" placeholder="Debe confirmar la contraseña">
+                    <span class="text-danger" id="error"></span>
+                </div>
+                <button type="submit" class="btn btn-primary col-xl-4 justify-items-center mt-3 rounded"  id="boton_actualizar">Actualizar perfil</button>
+            <div>
         </form>
     <div>
 </div>
