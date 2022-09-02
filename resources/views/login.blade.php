@@ -27,7 +27,7 @@
 
                     <h1>INICIAR SESIÓN</h1>
 
-                    <strong id="help-button">Necesitas ayuda?</strong>
+                    <strong id="help-button">Necesito ayuda</strong>
                     <div id="help">
                         <strong>Ponerse en contacto con alonso@gmail.com</strong>
                     </div>
@@ -55,7 +55,7 @@
                     </div>
                     <button type="submit">Iniciar Sesión</button>
                     <div>
-                        <a id="recordar" href="{{route('email_recuperation')}}">Recuperar contraseña?</a>
+                        <a id="recordar" href="{{route('email_recuperation')}}">Recuperar contraseña</a>
                     </div>
                 </form>
 

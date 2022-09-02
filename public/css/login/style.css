@@ -27,7 +27,6 @@ strong,
 a{
     font-family: 'Koulen', cursive;
     font-family: 'Roboto', sans-serif;
-    font-weight: light;
 }
 
 h1{
@@ -200,9 +199,7 @@ button{
 }
 
 button:hover{
-    background-color: white;
-    color: #229ad7;
-    box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
+    background-color: #196287;
 }
 
 span{
@@ -329,21 +326,6 @@ section{
 
 section{
     box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
-}
-
-/* Formas */
-
-div#help::before {
-    content: "";
-    position: absolute;
-    top: -19px;
-    width: 0px;
-    height: 0px;
-    border-right: 9px solid transparent;
-    border-top: 9px solid transparent;
-    border-left: 9px solid transparent;
-    border-bottom: 9px solid #c2c1c1;
-    right: 39px;
 }
 
 /* Ocultar */

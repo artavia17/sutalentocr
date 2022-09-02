@@ -14,10 +14,12 @@
 		</div>
 	</a>
 	<div>
-		<div class="d-flex">
-			<hr>
-			<h3 class="text-center py-4 mt-5 text-bold" id="grafico">VISITAS MENSUALES</h3>
-			<hr>
+		<div class="container mt-5">
+			<div class="row align-items-center">
+				<hr class="w-100 col">
+				<h3 class="text-center py-4 text-bold col" id="grafico">VISITAS MENSUALES</h3>
+				<hr class="w-100 col">
+			</div>
 		</div>
 		<canvas id="myChart"></canvas>
 	</div>

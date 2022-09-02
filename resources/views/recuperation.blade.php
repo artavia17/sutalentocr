@@ -41,7 +41,7 @@
 
                     <button type="submit">Verificar email</button>
                     <div>
-                        <a id="recordar" href="{{route('login')}}">Desea iniciar sesion?</a>
+                        <a id="recordar" href="{{route('login')}}">Iniciar Sesión</a>
                     </div>
                 </form>
             </section>

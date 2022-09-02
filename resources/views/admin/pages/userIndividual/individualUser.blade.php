@@ -51,7 +51,7 @@
                 @csrf
 
                 <div class="mb-5 w-100">
-                    <label class="d-flex" for="foto" id="container_image_perfil">\docs\9.x\migrations
+                    <label class="d-flex" for="foto" id="container_image_perfil">
 
                         @if ( $user->photo == 'null')
 
