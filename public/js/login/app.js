@@ -8,6 +8,8 @@ const formulario = document.querySelector("#formulario");
 
 //Funciones de eventos click
 
-help_button.onclick = () => {
-    help_container.classList.toggle('active');
+if(help_button){
+    help_button.onclick = () => {
+        help_container.classList.toggle('active');
+    }
 }

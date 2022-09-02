@@ -2,6 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\RegisterVisitController;
+use App\Http\Controllers\Api\NotificationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +16,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
+
+// Consultas de visitas y notificacion del mismo laravel
+Route::get('/visits', [RegisterVisitController::class, 'consults']);
+Route::get('/notifications', [NotificationController::class, 'index']);
+
+
+//Registros desde la pagina
+Route::get('/', [RegisterVisitController::class, 'index']);

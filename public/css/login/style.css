@@ -23,7 +23,8 @@ span,
 div#alert,
 strong,
 #recuperation,
-#inicio_sesion{
+#inicio_sesion,
+a{
     font-family: 'Koulen', cursive;
     font-family: 'Roboto', sans-serif;
     font-weight: light;
@@ -36,19 +37,26 @@ h1{
 label,
 input,
 button,
-#inicio_sesion{
+#inicio_sesion,
+a{
     font-size: 1rem;
 }
 
 strong,
 label,
-input{
+input,
+a{
     font-weight: lighter;
 }
 
 #recuperation,
 #inicio_sesion{
     text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+    margin-top: 14px;
 }
 
 /* Size */
@@ -126,7 +134,7 @@ input[type="checkbox"]{
 
 div#alert{
     padding: 20px;
-    width: 230px;
+    width: auto;
 }
 
 img{
@@ -276,8 +284,10 @@ div#alert{
     position: fixed;
     bottom: 100px;
     right: 16px;
-    animation: exito 4s ease-in-out;
+    animation: exito 6s ease;
     opacity: 0;
+    color: white;
+    z-index: 1;
 }
 
 @keyframes exito{
@@ -287,17 +297,17 @@ div#alert{
         opacity: 0;
     }
 
-    30%{
+    25%{
         bottom: 16px;
         opacity: 1;
     }
 
-    60%{
+    50%{
         bottom: 16px;
         opacity: 1;
     }
 
-    90%{
+    75%{
         bottom: 16px;
         opacity: 1;
     }

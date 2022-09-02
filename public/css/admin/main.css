@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,500&display=swap');
+
+h1,
+h3{
+    font-family: 'Roboto', sans-serif;
+}
+
 #foto{
     display: none;
 }
@@ -80,3 +87,86 @@ div#alert{
     }
 
 }
+
+@media (max-width: 1000px){
+    #administracion_user {
+        margin-top: 62px ;
+        padding: 10px !important;
+        box-shadow: none !important;
+    }
+
+    #registrar{
+        padding: 10px !important;
+        box-shadow: none !important;
+    }
+}
+
+button.btn.dropdown-toggle.text-white.fs-5.fw-lighter.w-100 {
+    padding: 0PX;
+    text-align: left;
+    margin-bottom: 10PX;
+}
+
+span.relative.z-0.inline-flex.shadow-sm.rounded-md a svg,
+span span svg{
+    width: 39px;
+}
+
+span.relative.z-0.inline-flex.shadow-sm.rounded-md a,
+span.relative.inline-flex.items-center.px-4.py-2.-ml-px.text-sm.font-medium.text-gray-500.bg-white.border.border-gray-300.cursor-default.leading-5,
+span.relative.inline-flex.items-center.px-2.py-2.text-sm.font-medium.text-gray-500.bg-white.border.border-gray-300.cursor-default.rounded-l-md.leading-5,
+nav.flex.items-center.justify-between div span,
+nav.flex.items-center.justify-between div a{
+    text-decoration: none;
+    border: none !important;
+}
+
+#visitas{
+    height: 500px;
+    background: url("../../img/portada_estadisticas.jpg") no-repeat;
+    background-size: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-decoration: none;
+}
+
+#visitas div{
+    z-index: 1;
+}
+
+#visitas::before{
+    z-index: 1;
+    content: "";
+    position: absolute;
+    bottom: 16px;
+    background-image: url("../../img/arrow-down.svg");
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: center center;
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: scale(1);
+    transition: .2s ease;
+}
+
+
+#visitas:hover::before{
+    transform: scale(1.1);
+}
+
+#visitas::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 0px;
+    bottom: 0px;
+}
+

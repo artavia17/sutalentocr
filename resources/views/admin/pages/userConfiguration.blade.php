@@ -8,7 +8,7 @@
 	
     <div class="row my-4 shadow p-3 mb-5 bg-body rounded p-4">
 
-        <h3 class="text-center">Datos de registro</h3>
+        <h3 class="text-center">Datos de personales</h3>
 
         <div class="table_container w-100 overflow-auto" style="">
 
@@ -17,16 +17,14 @@
                 <tr>
                     <th scope="col">Nombre completo</th>
                     <th scope="col">Correo electrónico</th>
-                    <th scope="col">Tipo de usuario</th>
                     <th scope="col">Fecha del registro</th>
-                    <th scope="col">Ultima actualizacion</th>
+                    <th scope="col">Última actualización</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
                     <th scope="row">{{auth()->user()->name}}</th>
                     <td>{{auth()->user()->email}}</td>
-                    <td>{{auth()->user()->type}}</td>
                     <td>{{auth()->user()->created_at}}</td>
                     <td>{{auth()->user()->updated_at}}</td>
                 </tr>
@@ -48,7 +46,7 @@
 
                         @if ( auth()->user()->photo == 'null')
 
-                            <img src="{{asset('img/user_logo.png')}}" alt="" width="200" class="m-auto" id="imagen_perfil">
+                            <img src="{{asset('img/user_logo.png')}}" alt="" width="200" height="200" class="m-auto" id="imagen_perfil">
 
                         @else
 

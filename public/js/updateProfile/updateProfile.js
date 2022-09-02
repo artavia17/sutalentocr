@@ -30,6 +30,9 @@ const password = document.querySelector("#password");
 const confirmation = document.querySelector("#confirmation");
 const error = document.querySelector("#error");
 const boton_updated = document.querySelector("#boton_actualizar");
+const boton_registrar = document.querySelector("#boton_registrar");
+
+if(boton_updated){
 
 actualizar.onsubmit = (e) =>{
 
@@ -41,6 +44,24 @@ actualizar.onsubmit = (e) =>{
     boton_updated.textContent = "Actualizando perfil ..."
     boton_updated.disabled = true;
 
+  }
+
+}
+
+}else if(boton_registrar){
+
+  actualizar.onsubmit = (e) =>{
+
+    if(password.value != confirmation.value){
+        error.textContent = "Las contraseñas no coinciden.";
+        e.preventDefault();
+    }else{
+      error.textContent = "";
+      boton_registrar.textContent = "Registrando usuario ..."
+      boton_registrar.disabled = true;
+  
+    }
+  
   }
 
 }

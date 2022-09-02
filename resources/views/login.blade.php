@@ -53,8 +53,10 @@
                         <input type="checkbox" id="check" name="remember">
                         <label for="check" id="recordar">Recordar mi sesión</label>
                     </div>
-
                     <button type="submit">Iniciar Sesión</button>
+                    <div>
+                        <a id="recordar" href="{{route('email_recuperation')}}">Recuperar contraseña?</a>
+                    </div>
                 </form>
 
                 @if(session('logout'))
